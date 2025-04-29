@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f4f4f4;
+    font-size: 16px;
+    font-weight: normal;
+    font: normal 16px Arial, Helvetica, sans-serif;
+}
+header{
+    padding: 10px 20px;
+    border-bottom: 2px solid #f25400;
+}
+.rosario3 h1{ 
+    color: #f25400;
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+    margin-left: 20%;
+}
+.nav-header{
+    margin-left: 50%;
+    margin-top: -25px;
+}
+.nav-header a{
+    text-decoration: none;
+    color: #f25400;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+.nav-header a:hover {
+    text-decoration: underline;
+}
+section{
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+section h2{
+    margin-top: 50px;
+    font-size: 40px;
+}
+section p{
+    margin-top: 10px;
+    font-size: 22px;
+}
+section img{
+    margin-top: 10px;
+    width: 100%;
+}
+article p{
+    text-align: left;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.article-links{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    text-align: center;
+}
+.article-links a{
+    background-color: #f25400;
+    border: 2px solid #f25400;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    font-size: 22px;
+}
+.article-links a:hover{
+    background-color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    color: #f25400;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+aside{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+}
+aside strong{
+    font-size: 22px;
+    color: #f25400;
+}
+form{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    border: 4px solid #f25400;
+}
+.p-form{
+    margin-top: 30px;
+}
+.p-form p{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+fieldset {
+    border: none;
+    margin-left: 20px ;
+    margin-bottom: 15px;
+}
+
+fieldset label {
+    font-size: 16px;
+    font-weight: bold;
+    width: 200px;
+    text-align: right;
+}
+
+fieldset input,
+fieldset select,
+fieldset textarea {
+    border: 2px solid #f25400;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 8px;
+    width: 300px;
+}
+
+fieldset textarea {
+    height: 150px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #f25400;
+    border-radius: 4px;
+    margin-right: 10px;
+    appearance: none;
+    background-color: white;
+}
+button {
+    background-color: #f25400;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+fieldset a {
+    align-self: center;
+    color: #f25400;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
