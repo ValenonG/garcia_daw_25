@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    font: normal 16px Arial, Helvetica, sans-serif;
+  }
+  
+  .main-container {
+    width: 100%;
+  }
+  
+  header {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 2px solid #f25400;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rosario3 h1 {
+    color: #f25400;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .nav-header a {
+    text-decoration: none;
+    color: #f25400;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 15px;
+  }
+  
+  .nav-header a:hover {
+    text-decoration: underline;
+  }
+  
+  section {
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+  }
+  
+  section h2 {
+    margin-top: 50px;
+    font-size: 40px;
+  }
+  
+  section p {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+  
+  section img {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  article p {
+    text-align: left;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .article-links {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .article-links a {
+    background-color: #f25400;
+    border: 2px solid #f25400;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    font-size: 22px;
+    padding: 5px 10px;
+  }
+  
+  .article-links a:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: #f25400;
+  }
+  
+  aside {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+  }
+  
+  aside strong {
+    font-size: 22px;
+    color: #f25400;
+  }
+  
+  form {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    border: 4px solid #f25400;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .p-form {
+    margin-top: 30px;
+  }
+  
+  .p-form p {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  fieldset input,
+  fieldset select,
+  fieldset textarea {
+    border: 2px solid #f25400;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  fieldset textarea {
+    height: 150px;
+  }
+  
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #f25400;
+    border-radius: 4px;
+    margin-right: 10px;
+    appearance: none;
+    background-color: white;
+  }
+  
+  button {
+    background-color: #f25400;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  fieldset a {
+    color: #f25400;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .bloque-deportes {
+    background-color: #f25400;
+    padding: 20px;
+    color: white;
+  }
+  
+  .bloque-deportes h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .bloque-deportes ul {
+    list-style: none;
+  }
+  
+  .bloque-deportes li {
+    margin-bottom: 10px;
+  }
+  
+  .bloque-deportes a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .bloque-deportes a:hover {
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .rosario3,
+    .nav-header {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-header a {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    section,
+    article p,
+    .article-links,
+    aside,
+    form {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .rosario3 h1 {
+      font-size: 28px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    fieldset a {
+      text-align: center;
+      display: block;
+    }
+    .bloque-deportes {
+        text-align: center;
+      }
+  }
+  
