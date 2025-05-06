@@ -1,0 +1,1 @@
+Link de la noticia de referencia https://www.rosario3.com/deportes/Cristian-Fabbiani-Quiero-que-sea-viernes-porque-el-Coloso-va-a-explotar-de-gente-20250408-0001.html
