@@ -1,3 +1,4 @@
+# VERSION 1.0
 # Portada de Diario - TP2 - Flexbox
 
 Este proyecto es una portada de diario digital responsiva desarrollada con HTML y CSS. Su diseño sigue un enfoque Mobile First, con una estructura clara y adaptable a distintos tamaños de pantalla.

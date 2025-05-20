@@ -11,6 +11,7 @@ Cada carpeta `clase_0X` representa una clase diferente, y dentro de ellas se enc
 - `clase_03/`: Actividades de la Clase 3.
 - `clase_04/`: Actividades de la Clase 4 (incluye el TP1).
 - `clase_05/`: Actividades de la Clase 5.
+- `clase_06/`: Actividades de la Clase 6. (TP2 - Flexbox)
 
 
 ## Archivo Principal
