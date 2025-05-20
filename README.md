@@ -17,7 +17,7 @@ Cada carpeta `clase_0X` representa una clase diferente, y dentro de ellas se enc
 
 El archivo `index.html` es una página principal que permite redirigirte a las distintas clases. Contiene enlaces que te llevan directamente al contenido de cada una.
 
-## Reposiorio de Github
+## Repositorio de Github
 - https://github.com/ValenonG/garcia_daw_25
 
 ## Github Pages
