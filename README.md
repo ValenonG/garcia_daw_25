@@ -13,6 +13,7 @@ Cada carpeta `clase_0X` representa una clase diferente, y dentro de ellas se enc
 - `clase_05/`: Actividades de la Clase 5.
 - `clase_06/`: Actividades de la Clase 6. (TP2 - Flexbox)
 - `clase_09/`: Actividades de la Clase 9.
+- `clase_10/`: Actividades de la Clase 10.
 
 
 ## Archivo Principal

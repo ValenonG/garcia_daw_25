@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario Futura+</title>
+    <link rel="shortcut icon" href="./img/letra-f.jpg">
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/subscription.css">
+    <script src="./scripts/subscription.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Diario Futura+</h1>
+            <p class="slogan">Información clara, al instante</p>
+        </div>
+        <a href="index.html" id="volver">Volver a la pagina principal</a>
+    </header>
+    <div class="form">
+        <h1 id="form-title" class="form-title">Formulario de suscripción</h1>
+        <form id="subscription-form" class="suscription-form">
+            <legend> Nombre completo:
+                <input type="text" id="name-complete" name="name-complete" placeholder="Ingrese su nombre">
+                <span class="error-message" id="error-name-complete"></span>
+            </legend>
+            <legend>Email:
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" />
+                <span class="error-message" id="error-email"></span>
+            </legend>
+            <legend>Contraseña:
+                <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+                <span class="error-message" id="error-password"></span>
+            </legend>
+            <legend>Repetir Contraseña:
+                <input type="password" id="repeat-password" name="repeat-password" placeholder="Repita su contraseña">
+                <span class="error-message" id="error-repeat-password"></span>
+            </legend>
+            <legend>Edad:
+                <input type="number" id="age" name="age" min="18" placeholder="Ingrese su edad"/>
+                <span class="error-message" id="error-age"></span>
+            </legend>
+            <legend>Teléfono:
+                <input type="tel" id="telephone" name="telephone" placeholder="Ingrese su número de teléfono">
+                <span class="error-message" id="error-telephone"></span>
+            </legend>
+            <legend>Dirección:
+                <input type="text" id="address" name="address" placeholder="Ingrese su dirección">
+                <span class="error-message" id="error-address"></span>
+            </legend>
+            <legend>Ciudad:
+                <input type="text" id="city" name="city" placeholder="Ingrese su ciudad">
+                <span class="error-message" id="error-city"></span>
+            </legend>
+            <legend>Código Postal:
+                <input type="text" id="zip-code" name="zip-code" placeholder="Ingrese su código postal">
+                <span class="error-message" id="error-zip-code"></span>
+            </legend>
+            <legend>DNI:
+                <input type="number" id="dni" name="dni" placeholder="Ingrese su DNI">
+                <span class="error-message" id="error-dni"></span>
+            </legend>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </div>
+    <div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="modal-close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-message"></p>
+    <pre id="modal-response"></pre>
+  </div>
+</div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Diario Futura+. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Aviso legal</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
