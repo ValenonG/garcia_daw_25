@@ -1,8 +1,32 @@
 var form = document.getElementById('subscription-form');
 var inputs = form.querySelectorAll('input');
 var title = document.getElementById('form-title');
-var nameInput = document.getElementById('name_complete');
+var nameInput = document.getElementById('name-complete');
+window.onload = function () {
+  var storedData = localStorage.getItem('subscriptionResponse');
+  if (storedData) {
+    var parsed = JSON.parse(storedData);
+    inputs.forEach(function(input) {
+      var value = parsed[input.name];
+      if (value !== undefined) {
+        input.value = value;
+        if (input.name === 'name-complete') {
+          updateTitle();
+        }
+      }
+    });
+  }
+};
 
+var modal = document.getElementById('modal');
+var modalTitle = document.getElementById('modal-title');
+var modalMessage = document.getElementById('modal-message');
+var modalResponse = document.getElementById('modal-response');
+var modalClose = document.getElementById('modal-close');
+
+modalClose.onclick = function () {
+  modal.classList.add('hidden');
+};
 
 function showError(input, message) {
   var errorSpan = document.getElementById('error-' + input.name);
@@ -31,7 +55,7 @@ function validateInput(input) {
   }
 
   switch (name) {
-    case 'name_complete':
+    case 'name-complete':
       if (value.length <= 6 || !value.includes(' ')) {
         return 'Debe tener más de 6 letras y al menos un espacio.';
       }
@@ -46,7 +70,7 @@ function validateInput(input) {
         return 'Al menos 8 caracteres, con letras y números.';
       }
       break;
-    case 'repeat_password':
+    case 'repeat-password':
       if (value !== form.password.value) {
         return 'Las contraseñas no coinciden.';
       }
@@ -109,36 +133,69 @@ inputs.forEach(function(input) {
     hideError(input);
   });
 
-  if (input.name === 'name_complete') {
+  if (input.name === 'name-complete') {
     input.addEventListener('input', updateTitle);
   }
 });
 
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
   e.preventDefault();
 
   var isValid = true;
-  var mensajes = [];
+  var data = {};
+  var i;
 
-  inputs.forEach(function(input) {
+  for (i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
     var error = validateInput(input);
     if (error) {
       showError(input, error);
       isValid = false;
-      mensajes.push(input.name + ': ' + error);
     } else {
       hideError(input);
-      mensajes.push(input.name + ': ' + input.value);
+      data[input.name] = input.value.trim();
     }
-  });
-
-  if (isValid) {
-    
-    alert('Formulario enviado con éxito:\n\n' + mensajes.join('\n'));
-    form.reset();
-    title.textContent = 'Formulario de suscripción';
-  } else {
-    alert('Hay errores en el formulario:\n\n' + mensajes.join('\n'));
   }
+
+  if (!isValid) {
+    modalTitle.textContent = 'Error en la validación';
+    modalMessage.textContent = 'Por favor, corregí los errores en el formulario.';
+    modalResponse.textContent = '';
+    modal.classList.remove('hidden');
+    return;
+  }
+
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+    .then(function (response) {
+      if (!response.ok) {
+        return response.text().then(function (text) {
+          throw new Error(text || 'Error en la suscripción');
+        });
+      }
+      return response.json();
+    })
+    .then(function (responseData) {
+      modalTitle.textContent = '¡Suscripción exitosa!';
+      modalMessage.textContent = 'Gracias por suscribirte. Estos son los datos recibidos del servidor:';
+      modalResponse.textContent = JSON.stringify(responseData, null, 2);
+      modal.classList.remove('hidden');
+
+      localStorage.setItem('subscriptionResponse', JSON.stringify(responseData));
+      form.reset();
+      title.textContent = 'Formulario de suscripción';
+    })
+    .catch(function (error) {
+      modalTitle.textContent = 'Error en la suscripción';
+      modalMessage.textContent = 'No se pudo completar la suscripción.';
+      modalResponse.textContent = error.message;
+      modal.classList.remove('hidden');
+    });
 });
+
