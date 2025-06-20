@@ -1,20 +1,12 @@
 var form = document.getElementById('subscription-form');
 var inputs = form.querySelectorAll('input');
 var title = document.getElementById('form-title');
-var nameInput = document.getElementById('name-complete');
+var nameInput = document.getElementById('name_complete');
 window.onload = function () {
   var storedData = localStorage.getItem('subscriptionResponse');
   if (storedData) {
     var parsed = JSON.parse(storedData);
-    inputs.forEach(function(input) {
-      var value = parsed[input.name];
-      if (value !== undefined) {
-        input.value = value;
-        if (input.name === 'name-complete') {
-          updateTitle();
-        }
-      }
-    });
+    alert('Datos previos recuperados del LocalStorage:\n\n' + JSON.stringify(parsed, null, 2));
   }
 };
 
@@ -55,7 +47,7 @@ function validateInput(input) {
   }
 
   switch (name) {
-    case 'name-complete':
+    case 'name_complete':
       if (value.length <= 6 || !value.includes(' ')) {
         return 'Debe tener más de 6 letras y al menos un espacio.';
       }

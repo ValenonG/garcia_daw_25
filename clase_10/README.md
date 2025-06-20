@@ -1,11 +1,11 @@
-# VERSION 1.1
-# Portada de Diario - Actividad Clase_09
+# VERSION 1.2
+# Portada de Diario - Actividad Clase_10
 
 Este proyecto es un sitio web del diario Futura+, compuesto por una portada de noticias y un formulario de suscripción. Está desarrollado con HTML, CSS y JavaScript, aplicando principios de diseño responsivo (Mobile First) y validaciones personalizadas en el formulario.
 
 ## 📁 Estructura de Carpetas
 
-/clase_09
+/clase_10
 ├── index.html
 ├── subscription.html
 ├── css/
