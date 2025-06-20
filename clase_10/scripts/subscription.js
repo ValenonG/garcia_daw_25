@@ -1,7 +1,7 @@
 var form = document.getElementById('subscription-form');
 var inputs = form.querySelectorAll('input');
 var title = document.getElementById('form-title');
-var nameInput = document.getElementById('name_complete');
+var nameInput = document.getElementById('name-complete');
 window.onload = function () {
   var storedData = localStorage.getItem('subscriptionResponse');
   if (storedData) {
@@ -47,7 +47,7 @@ function validateInput(input) {
   }
 
   switch (name) {
-    case 'name_complete':
+    case 'name-complete':
       if (value.length <= 6 || !value.includes(' ')) {
         return 'Debe tener más de 6 letras y al menos un espacio.';
       }
