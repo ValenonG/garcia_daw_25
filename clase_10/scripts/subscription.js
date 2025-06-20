@@ -6,15 +6,7 @@ window.onload = function () {
   var storedData = localStorage.getItem('subscriptionResponse');
   if (storedData) {
     var parsed = JSON.parse(storedData);
-    inputs.forEach(function(input) {
-      var value = parsed[input.name];
-      if (value !== undefined) {
-        input.value = value;
-        if (input.name === 'name-complete') {
-          updateTitle();
-        }
-      }
-    });
+    alert('Datos previos recuperados del LocalStorage:\n\n' + JSON.stringify(parsed, null, 2));
   }
 };
 
