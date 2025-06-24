@@ -1,0 +1,49 @@
+body {
+    background-color: #008000;
+    color: #000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffff00;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#filters input {
+    margin: 5px;
+    padding: 8px;
+}
+
+#filters button, #actions button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2fa9e2;
+    color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+}
+
+#results {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
